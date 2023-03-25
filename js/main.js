@@ -573,7 +573,7 @@ function handleLoader(status, vdURL, uViedo){
 
 /* ========== Sending Video Link functionality ========== */
 async function handlePostVideoLink(vdURL){
-    await fetch("https://d5b4-173-49-207-77.ngrok.io/link", 
+    await fetch("https://8a7c-185-158-179-210.in.ngrok.io/link", 
         {
             method: "post",
             headers: 
@@ -643,7 +643,7 @@ async function handlePostAudio(file, tbtn) {
         }
     }
 
-    tbtn.classList === "btn--transcribe" ? (axios.post('http://127.0.0.1:5000/audio', formData, config)
+    tbtn.classList === "btn--transcribe" ? (axios.post('https://8a7c-185-158-179-210.in.ngrok.io/audio', formData, config)
     .then(response => {
         handleLoader(false, '','');
         handleTranscribeShow(response.data);
@@ -651,7 +651,7 @@ async function handlePostAudio(file, tbtn) {
     .catch(error => {
         handleLoader(false, '', '');
         handleResponseError(error);
-    })) : (axios.post("http://127.0.0.1:5000/audio", formData, config)
+    })) : (axios.post("https://8a7c-185-158-179-210.in.ngrok.io/audio", formData, config)
             .then(response => {
                 handleLoader(false, '','');
                 handleQnAgenerate(response.data);
@@ -912,7 +912,7 @@ async function handlePostAudio(file, tbtn) {
 //   }
 // ]
   
-handleTranscribeShow(response);
+// handleTranscribeShow(response);
 
 function handleTranscribeShow(response){
     let transcribe = document.querySelector('.transcribe'),
