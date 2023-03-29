@@ -573,7 +573,7 @@ function handleLoader(status, vdURL, uViedo){
 
 /* ========== Sending Video Link functionality ========== */
 async function handlePostVideoLink(vdURL){
-    await fetch("https://8a7c-185-158-179-210.in.ngrok.io/link", 
+    await fetch("https://50d7-185-158-179-210.eu.ngrok.io/link", 
         {
             method: "post",
             headers: 
@@ -643,7 +643,7 @@ async function handlePostAudio(file, tbtn) {
         }
     }
 
-    tbtn.classList === "btn--transcribe" ? (axios.post('https://8a7c-185-158-179-210.in.ngrok.io/audio', formData, config)
+    tbtn.classList === "btn--transcribe" ? (axios.post('https://50d7-185-158-179-210.eu.ngrok.io/audio', formData, config)
     .then(response => {
         handleLoader(false, '','');
         handleTranscribeShow(response.data);
@@ -651,7 +651,7 @@ async function handlePostAudio(file, tbtn) {
     .catch(error => {
         handleLoader(false, '', '');
         handleResponseError(error);
-    })) : (axios.post("https://e17e-185-158-179-210.jp.ngrok.io/audio", formData, config)
+    })) : (axios.post("https://ed4e-185-158-179-210.jp.ngrok.io/audio", formData, config)
             .then(response => {
                 handleLoader(false, '','');
                 handleQnAgenerate(response.data);
